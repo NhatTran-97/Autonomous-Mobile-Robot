@@ -1,0 +1,28 @@
+# --volume="/home:/home" \
+# --volume="/home/nhatbot_ws:/home/nhatbot_ws"
+
+
+#  sudo docker run -it --rm --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --network=host --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --device=/dev/video0 --device=/dev/bus/usb --privileged --volume="/home/ninhnt/nhatbot_ws:/home/nhatbot_ws" nhatbot:latest
+
+# export DISPLAY=:0
+# xhost +local:root
+
+sudo docker exec -it nhatbot_container bash
+
+
+
+Build a docker image: docker build -t nhatbot .
+Run a docker container: docker run -it --rm nhatbot
+sudo chmod -R 777 /home
+
+sudo docker exec -it nhatbot_container bash  truy cap vao container dang chay/ mo them terminal
+sudo docker start -ai nhatbot_container   mo lai container da dung (truong hop khong dung --rm)
+sudo docker stop nhatbot_container: Dung container khi khong dung nua
+sudo docker rm nhatbot_container: Xoa container khi khong dung nua 
+
+
+-d giu container o che do chay nen 
+--rm huy container
+
+sudo docker exec -it nhatbot_container bash
+ssh ninhnt@192.168.10.32
