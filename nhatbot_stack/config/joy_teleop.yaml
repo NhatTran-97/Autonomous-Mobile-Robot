@@ -1,0 +1,35 @@
+# joy_teleop:
+#   ros__parameters:
+#     move:
+#       type: topic
+#       interface_type: geometry_msgs/msg/Twist
+#       topic_name: nhatbot_controller/cmd_vel  # Kiểm tra xem bạn có sử dụng đúng topic cần thiết không
+#       deadman_buttons: [5] # Bạn phải giữ nút 5 trên joystick để gửi lệnh
+#       axis_mappings:
+#         linear-x:
+#           axis: 1
+#           scale: 0.055
+#           offset: 0.0
+#         angular-z:
+#           axis: 3
+#           scale: 0.1
+#           offset: 0.0
+
+
+joy_teleop:
+  ros__parameters:
+    move:
+      type: topic
+      interface_type: geometry_msgs/msg/Twist
+      topic_name: nhatbot_controller/cmd_vel 
+      deadman_buttons: [5]  
+      axis_mappings:
+        linear-x:
+          axis: 1
+          scale: 0.055
+          offset: 0.0
+        angular-z:
+          axis: 3
+          scale: 0.1
+          offset: 0.0
+

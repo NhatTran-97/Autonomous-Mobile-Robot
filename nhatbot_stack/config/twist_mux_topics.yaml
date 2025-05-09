@@ -1,0 +1,12 @@
+twist_mux:
+  ros__parameters:
+    topics:
+      joystick:
+        topic   : teleop
+        timeout : 0.2
+        priority: 100
+        
+      navigation: 
+        topic   : drive
+        timeout : 0.2
+        priority: 10
